@@ -1,0 +1,27 @@
+services:
+  testdb:
+    image: postgres
+    environment:
+      POSTGRES_USER: 'root'
+      POSTGRES_PASSWORD: 'root'
+      POSTGRES_DB: 'taxi_rides'
+    volumes:
+      - vol-testdb:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+  pg-admin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'user@user.com'
+      PGADMIN_DEFAULT_PASSWORD: '1234'
+    volumes:
+      - vol-pgadmin:/var/lib/pgadmin
+    ports:
+      - '8080:80'
+
+volumes:
+  vol-testdb:
+    name: vol-testdb
+  vol-pgadmin:
+    name: vol-pgadmin

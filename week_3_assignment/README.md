@@ -79,7 +79,7 @@ docker run -it \
 
 ---
 
-### Stopping
+### 🛑 Stopping
 To stop the containers, run:
 
 `docker-compose down`

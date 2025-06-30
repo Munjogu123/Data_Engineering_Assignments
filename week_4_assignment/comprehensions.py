@@ -1,3 +1,12 @@
+"""
+Group Members:
+1. Fred Munjogu
+2. Brian Oyollo
+3. Elvis Mwangi
+4. Caesar Augustine
+"""
+
+
 # Use a list comprehension to filter all the scores above 60 and store them in a new list called passed
 scores = [45, 78, 88, 56, 90, 62, 33, 99, 70, 50]
 passed = [score for score in scores if score > 60]
